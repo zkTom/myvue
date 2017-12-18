@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test-01</title>
+        <meta charset="utf-8">
+    </head>
+	<body>
+		<div id="demo" v-on="click:changeText">
+			<p>{{hello}}</p>
+		</div>
+	</body>
+<script>
+new Vue({
+    el: '#demo',
+    scope: {
+        hello: 'Hello World!',
+        changeText: function () {
+            this.hello = 'Hello VueJS!'
+        }
+	}
+})
+</script>
+</html>
